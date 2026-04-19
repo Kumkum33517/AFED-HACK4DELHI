@@ -1,6 +1,7 @@
 import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { createServer } from "./server/index.ts";
 
 export default defineConfig({
   server: {
@@ -27,11 +28,8 @@ function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
     apply: "serve",
-    async configureServer(viteServer) {
-      // Only runs in dev (apply: "serve"), never during build
-      // Use Function constructor to prevent static analysis / bundling
-      const mod = await (new Function('p', 'return import(p)'))("./server/index.ts");
-      const app = mod.createServer();
+    configureServer(viteServer) {
+      const app = createServer();
       viteServer.middlewares.use(app);
     },
   };
