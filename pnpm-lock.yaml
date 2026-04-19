@@ -17,6 +17,9 @@ importers:
       express:
         specifier: ^5.1.0
         version: 5.1.0
+      tsx:
+        specifier: ^4.20.3
+        version: 4.20.3
       zod:
         specifier: ^3.25.76
         version: 3.25.76
@@ -222,9 +225,6 @@ importers:
       three:
         specifier: ^0.176.0
         version: 0.176.0
-      tsx:
-        specifier: ^4.20.3
-        version: 4.20.3
       typescript:
         specifier: ^5.9.2
         version: 5.9.2
