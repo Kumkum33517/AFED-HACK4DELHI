@@ -1,0 +1,176 @@
+{
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "detection": "पहचान",
+    "analytics": "विश्लेषण",
+    "reports": "रिपोर्ट",
+    "settings": "सेटिंग्स"
+  },
+  "roleSelection": {
+    "title": "AFED में आपका स्वागत है",
+    "subtitle": "प्रशासनिक धोखाधड़ी और घटना पहचान",
+    "instruction": "जारी रखने के लिए अपनी भूमिका चुनें",
+    "auditor": {
+      "title": "ऑडिटर / कम्पलायंस ऑफिसर",
+      "label": "ऑडिट और अनुपालन",
+      "description": "विसंगतियाँ, रिपोर्ट, विश्लेषण देख सकते हैं"
+    },
+    "administrator": {
+      "title": "प्रशासक",
+      "label": "सिस्टम एडमिन",
+      "description": "सिस्टम स्वास्थ्य, कॉन्फ़िगरेशन, एक्सेस नियंत्रण देख सकते हैं"
+    },
+    "analyst": {
+      "title": "विश्लेषक",
+      "label": "डेटा विश्लेषक",
+      "description": "पहचान, विश्लेषण, प्रवृत्तियाँ देख सकते हैं"
+    },
+    "selectRole": "भूमिका चुनें"
+  },
+  "landing": {
+    "title": "AFED",
+    "subtitle": "स्वचालित धोखाधड़ी और घटना पहचान",
+    "description": "अपने सिस्टम को धोखाधड़ी और विसंगतियों से सुरक्षित रखें",
+    "start": "शुरू करें"
+  },
+  "dashboard": {
+    "title": "डैशबोर्ड",
+    "subtitle": "स्वचालित धोखाधड़ी और घटना पहचान प्लेटफॉर्म",
+    "viewDetails": "विवरण देखें",
+    "totalEvents": "कुल घटनाएं",
+    "anomalies": "विसंगतियाँ",
+    "eventsAnalyzed": "विश्लेषण की गई घटनाएं",
+    "eventsOverTime": "समय के साथ घटनाएं",
+    "recentEvents": "हाल की घटनाएं",
+    "recentAlerts": "हाल की सचेतनी",
+    "quickStats": "त्वरित आँकड़े",
+    "riskScore": "जोखिम स्कोर",
+    "activeAlerts": "सक्रिय सचेतनी",
+    "mediumRisk": "मध्यम जोखिम",
+    "highRisk": "उच्च जोखिम",
+    "systemHealth": "सिस्टम स्वास्थ्य",
+    "processingRate": "प्रसंस्करण दर",
+    "detectionAccuracy": "पहचान सटीकता",
+    "avgResponseTime": "औसत प्रतिक्रिया समय",
+    "systemMetrics": "सिस्टम मेट्रिक्स"
+  },
+  "detection": {
+    "title": "विसंगति पहचान केस",
+    "subtitle": "पहचानी गई विसंगतियों और धोखाधड़ी घटनाओं के लिए केस प्रबंधन प्रणाली",
+    "severityFilter": "गंभीरता फ़िल्टर",
+    "timeRange": "समय सीमा",
+    "detectionType": "पहचान प्रकार",
+    "quickFilters": "त्वरित फ़िल्टर",
+    "all": "सभी",
+    "last24Hours": "पिछले 24 घंटे",
+    "allTypes": "सभी प्रकार",
+    "allCases": "सभी केस",
+    "eventId": "घटना ID",
+    "type": "प्रकार",
+    "description": "विवरण",
+    "severity": "गंभीरता",
+    "riskScore": "जोखिम स्कोर",
+    "status": "स्थिति",
+    "time": "समय",
+    "action": "कार्रवाई",
+    "viewDetails": "विवरण देखें",
+    "high": "उच्च",
+    "medium": "मध्यम",
+    "low": "कम",
+    "new": "नया",
+    "underReview": "समीक्षा में",
+    "closed": "बंद",
+    "minutesAgo": "मिनट पहले",
+    "hoursAgo": "घंटे पहले",
+    "noEvents": "आपके फ़िल्टर से मेल खाने वाली कोई घटना नहीं मिली",
+    "eventTypes": {
+      "payment": "भुगतान",
+      "procurement": "खरीद",
+      "welfare": "कल्याण"
+    },
+    "details": {
+      "title": "पहचान विवरण",
+      "eventId": "घटना ID",
+      "alert": "सचेतनी",
+      "riskScore": "जोखिम स्कोर",
+      "whyFlagged": "इसे क्यों फ़्लैग किया गया",
+      "normalBehavior": "सामान्य व्यवहार तुलना",
+      "suggestedAction": "सुझाई गई कार्रवाई",
+      "markReviewed": "समीक्षित के रूप में चिह्नित करें",
+      "closeCase": "केस बंद करें"
+    }
+  },
+  "reports": {
+    "title": "रिपोर्ट",
+    "subtitle": "धोखाधड़ी पहचान रिपोर्ट जनरेट और प्रबंधित करें",
+    "weeklyReports": "साप्ताहिक रिपोर्ट",
+    "dailyReports": "दैनिक रिपोर्ट",
+    "monthlyReports": "मासिक रिपोर्ट",
+    "customReports": "कस्टम रिपोर्ट",
+    "generateNew": "नई रिपोर्ट जनरेट करें",
+    "reportType": "रिपोर्ट प्रकार",
+    "dateRange": "तारीख सीमा",
+    "format": "प्रारूप",
+    "previewSummary": "प्रारंभिक सारांश",
+    "totalEvents": "कुल घटनाएं",
+    "anomaliesIncluded": "विसंगतियाँ शामिल",
+    "highRiskCases": "उच्च जोखिम केस",
+    "generate": "रिपोर्ट जनरेट करें",
+    "recentReports": "हाल की रिपोर्ट",
+    "generated": "जनरेट की गई",
+    "download": "डाउनलोड",
+    "uploadDocument": "विश्लेषण के लिए दस्तावेज़ अपलोड करें",
+    "dragDrop": "अपना दस्तावेज़ यहाँ खींचें और छोड़ें, या चुनने के लिए क्लिक करें",
+    "supportedFormats": "समर्थित प्रारूप: PDF, CSV, Excel, Text",
+    "selectFile": "फ़ाइल चुनें",
+    "reportTypes": {
+      "weeklySummary": "साप्ताहिक सारांश",
+      "dailyReport": "दैनिक रिपोर्ट",
+      "monthlyReport": "मासिक रिपोर्ट",
+      "custom": "कस्टम"
+    },
+    "dateRanges": {
+      "last7Days": "पिछले 7 दिन",
+      "last30Days": "पिछले 30 दिन",
+      "last90Days": "पिछले 90 दिन",
+      "custom": "कस्टम"
+    },
+    "formats": {
+      "pdf": "PDF",
+      "csv": "CSV",
+      "excel": "Excel",
+      "json": "JSON"
+    }
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "subtitle": "AFED सिस्टम सेटिंग्स, सुरक्षा और एक्सेस नियंत्रण कॉन्फ़िगर करें",
+    "security": "सुरक्षा",
+    "accessControl": "एक्सेस नियंत्रण",
+    "preferences": "सिस्टम वरीयताएं",
+    "securitySettings": "सुरक्षा सेटिंग्स",
+    "securityDesc": "AFED के लिए सुरक्षा और प्रमाणीकरण सेटिंग्स कॉन्फ़िगर करें",
+    "twoFactor": "दो-कारक प्रमाणीकरण",
+    "ipWhitelist": "IP व्हाइटलिस्ट",
+    "sessionTimeout": "सत्र समय सीमा",
+    "apiKeyRotation": "API कुंजी रोटेशन",
+    "theme": "थीम",
+    "language": "भाषा",
+    "darkMode": "डार्क मोड",
+    "lightMode": "लाइट मोड"
+  },
+  "common": {
+    "loading": "लोड हो रहा है...",
+    "error": "त्रुटि",
+    "success": "सफल",
+    "cancel": "रद्द करें",
+    "submit": "जमा करें",
+    "save": "सहेजें",
+    "delete": "हटाएं",
+    "edit": "संपादित करें",
+    "close": "बंद करें",
+    "view": "देखें",
+    "download": "डाउनलोड",
+    "upload": "अपलोड"
+  }
+}

@@ -1,0 +1,15 @@
+[phases.setup]
+nixPkgs = ["nodejs_22", "python312", "python312Packages.pip"]
+
+[phases.install]
+cmds = [
+  "python3 -m venv /app/.venv",
+  "/app/.venv/bin/pip install scikit-learn pandas numpy openpyxl",
+  "pnpm install --frozen-lockfile"
+]
+
+[phases.build]
+cmds = ["pnpm build"]
+
+[start]
+cmd = "pnpm start"
