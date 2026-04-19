@@ -4,7 +4,7 @@ nixPkgs = ["nodejs_22", "python312"]
 [phases.install]
 cmds = [
   "npm install -g pnpm@10",
-  "export PATH=$PATH:/root/.npm-global/bin:/usr/local/bin && python3 -m venv /app/.venv",
+  "python3 -m venv /app/.venv",
   "/app/.venv/bin/pip install scikit-learn pandas numpy openpyxl",
   "npx pnpm install --frozen-lockfile"
 ]
@@ -13,4 +13,4 @@ cmds = [
 cmds = ["npx pnpm build"]
 
 [start]
-cmd = "npx pnpm start"
+cmd = "node --import tsx/esm server/node-build.ts"
