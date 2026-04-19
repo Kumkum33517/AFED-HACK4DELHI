@@ -1,10 +1,14 @@
 import { defineConfig } from "vite";
 import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "server/node-build.ts"),
+      entry: path.join(__dirname, "server", "node-build.ts"),
       name: "server",
       fileName: "production",
       formats: ["es"],
@@ -14,13 +18,10 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       external: [
-        // Node built-ins
         /^node:/,
         "fs", "path", "url", "http", "https", "os", "crypto",
         "stream", "util", "events", "buffer", "querystring", "child_process",
-        // All npm deps — don't bundle, resolve at runtime
-        "express", "cors", "dotenv", "exceljs",
-        "dotenv/config",
+        "express", "cors", "dotenv", "exceljs", "dotenv/config",
       ],
       output: {
         format: "es",
@@ -32,8 +33,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./client"),
-      "@shared": path.resolve(__dirname, "./shared"),
+      "@": path.join(__dirname, "client"),
+      "@shared": path.join(__dirname, "shared"),
     },
   },
   define: {
