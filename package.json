@@ -12,10 +12,10 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "npm run build:client && npm run build:server",
+    "build": "vite build --config vite.config.client.ts",
     "build:client": "vite build --config vite.config.client.ts",
-    "build:server": "vite build --config vite.config.server.ts",
-    "start": "node dist/server/node-build.mjs",
+    "build:server": "echo 'Server runs via tsx, no build needed'",
+    "start": "node --import tsx/esm server/node-build.ts",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
