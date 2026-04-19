@@ -2,7 +2,7 @@
 builder = "nixpacks"
 
 [deploy]
-startCommand = "npx tsx server/node-build.ts"
+startCommand = "node_modules/.bin/tsx /app/server/node-build.ts"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 30
 restartPolicyType = "on_failure"
