@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import path from "path";
 
-// Server build configuration
 export default defineConfig({
   build: {
     lib: {
@@ -15,30 +14,20 @@ export default defineConfig({
     ssr: true,
     rollupOptions: {
       external: [
-        // Node.js built-ins
-        "fs",
-        "path",
-        "url",
-        "http",
-        "https",
-        "os",
-        "crypto",
-        "stream",
-        "util",
-        "events",
-        "buffer",
-        "querystring",
-        "child_process",
-        // External dependencies that should not be bundled
-        "express",
-        "cors",
+        // Node built-ins
+        /^node:/,
+        "fs", "path", "url", "http", "https", "os", "crypto",
+        "stream", "util", "events", "buffer", "querystring", "child_process",
+        // All npm deps — don't bundle, resolve at runtime
+        "express", "cors", "dotenv", "exceljs",
+        "dotenv/config",
       ],
       output: {
         format: "es",
         entryFileNames: "[name].mjs",
       },
     },
-    minify: false, // Keep readable for debugging
+    minify: false,
     sourcemap: true,
   },
   resolve: {
