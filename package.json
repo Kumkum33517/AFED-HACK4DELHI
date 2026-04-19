@@ -15,7 +15,7 @@
     "build": "vite build --config vite.config.client.ts",
     "build:client": "vite build --config vite.config.client.ts",
     "build:server": "echo 'Server runs via tsx, no build needed'",
-    "start": "node --import tsx/esm server/node-build.ts",
+    "start": "npx tsx server/node-build.ts",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",

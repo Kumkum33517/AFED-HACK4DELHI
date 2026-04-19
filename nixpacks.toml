@@ -13,4 +13,4 @@ cmds = [
 cmds = ["npx pnpm build"]
 
 [start]
-cmd = "node --import tsx/esm server/node-build.ts"
+cmd = "npx tsx server/node-build.ts"
