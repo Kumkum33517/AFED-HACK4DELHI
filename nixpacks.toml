@@ -3,15 +3,14 @@ nixPkgs = ["nodejs_22", "python312"]
 
 [phases.install]
 cmds = [
-  "corepack enable",
-  "corepack prepare pnpm@latest --activate",
-  "python3 -m venv /app/.venv",
+  "npm install -g pnpm@10",
+  "export PATH=$PATH:/root/.npm-global/bin:/usr/local/bin && python3 -m venv /app/.venv",
   "/app/.venv/bin/pip install scikit-learn pandas numpy openpyxl",
-  "pnpm install --frozen-lockfile"
+  "npx pnpm install --frozen-lockfile"
 ]
 
 [phases.build]
-cmds = ["pnpm build"]
+cmds = ["npx pnpm build"]
 
 [start]
-cmd = "pnpm start"
+cmd = "npx pnpm start"
