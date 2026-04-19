@@ -2,8 +2,7 @@ import { defineConfig, Plugin } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
-// https://vitejs.dev/config/
-export default defineConfig(({ mode }) => ({
+export default defineConfig({
   server: {
     host: "::",
     port: 8080,
@@ -22,17 +21,18 @@ export default defineConfig(({ mode }) => ({
       "@shared": path.resolve(__dirname, "./shared"),
     },
   },
-}));
+});
 
 function expressPlugin(): Plugin {
   return {
     name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
-    async configureServer(server) {
-      // Dynamic import so it's never bundled during build
-      const { createServer } = await import("./server/index.js");
-      const app = createServer();
-      server.middlewares.use(app);
+    apply: "serve",
+    async configureServer(viteServer) {
+      // Only runs in dev (apply: "serve"), never during build
+      // Use Function constructor to prevent static analysis / bundling
+      const mod = await (new Function('p', 'return import(p)'))("./server/index.ts");
+      const app = mod.createServer();
+      viteServer.middlewares.use(app);
     },
   };
 }
